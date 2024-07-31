@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 🧪 Tecnologias
 
-## Getting Started
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-First, run the development server:
+- [Nextjs](https://nextjs.org)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind](https://tailwindcss.com)
+- [ShadcnUI](https://ui.shadcn.com)
+
+## 🚀 Como executar
+
+Clone o projeto e acesse a pasta do mesmo.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+$ git clone https://github.com/Brunoocn/tokenizadora-case-front.git
+$ cd tokenizadora-case-front
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Para iniciá-lo, siga os passos abaixo:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Instalar as dependências
+$ yarn install
+# Iniciar o projeto
+$ yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+O app estará disponível no seu browser pelo endereço http://localhost:3000.
 
-## Learn More
+Vale lembrar que você deve configurar .env como o .env.exemple
 
-To learn more about Next.js, take a look at the following resources:
+## ⚡️ Projeto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- A ideia do projeto foi ter uma estrutura o mais simples possivel de front, e tentar deixar ele com o minimo de responsabilidade 
+  possivel, apenas exibindo dados e não sendo responsavel pela regra de negocio.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Porque escolhi react com next e não vue, ou outro framework? O next está trazendo uma parte de separação de server-side com client-side e
+  parte de cache muito interessante, e como estamos trabalhando com um grande numero de requests, por conta de atualizar a cada 5 minutos as
+  cryptos, a parte de cache seria bem util junto com a request por lado do server-side.
 
-## Deploy on Vercel
+- Escolhi o shadcn por conta de trazer componentes prontos, mas que seria possivel fazer qualquer customização com ele, mas qualquer outro 
+  ui-framework seria bem facil de utilizar dado a simplicidade do projeto.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Porque não desenvolvi testes no front? Dado a simplicidade do projeto e pela falta de tempo, acabei optando por não desenvolver testes no front-end, mas
+  caso tivesse mais tempo, com certeza era algo que iria desenvolver.
