@@ -33,6 +33,7 @@ export default function Signin() {
         body: JSON.stringify(data),
       });
 
+    
       setCookie("TOKEN", request.token);
       setCookie("USER", JSON.stringify(request.user));
 

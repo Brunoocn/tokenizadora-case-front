@@ -5,7 +5,8 @@ import { fetchWrapper } from "./utils/fetchWrapper";
 export default async function middleware(request: NextRequest) {
   const token = request.cookies.get("TOKEN");
   const signInURL = new URL("/auth/signin", request.url);
-  const mainURL = new URL("/operations", request.url);
+
+  const mainURL = new URL("/crypto", request.url);
 
   if (request.nextUrl.pathname.startsWith("/_next/")) {
     return NextResponse.next();

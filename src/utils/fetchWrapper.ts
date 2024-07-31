@@ -1,7 +1,7 @@
 import { getCookie } from "cookies-next";
 
 interface RequestInits extends RequestInit {
-  responseType?: "json" | "text" | "blob" | "formData" | "arrayBuffer";
+  responseType?: "json" | "blob";
 }
 
 export async function fetchWrapper<T = unknown>(
