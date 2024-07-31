@@ -1,7 +1,18 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Poppins } from "next/font/google";
+import { Toaster } from "@/components/ui/toaster";
+import "../styles/globals.css";
+import { Metadata } from "next";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  weight: ["400", "600", "900"],
+  display: "swap",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "Tokenizadora - Case",
+  description: "Tokenizadora - Case",
+};
 
 export default function RootLayout({
   children,
@@ -10,7 +21,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>{children}</body>
+      <body className={poppins.className}>{children}</body>
+      <Toaster />
     </html>
   );
 }
