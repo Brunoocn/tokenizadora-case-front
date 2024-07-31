@@ -10,7 +10,6 @@ interface AutoCompleteSelectProps {
 export function AutoCompleteSelect({
   options,
   onChange,
-
   selectMessage = "Selecione um item disponivel",
 }: AutoCompleteSelectProps) {
   const optionsFormatted = options?.map((item) => ({

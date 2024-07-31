@@ -4,9 +4,8 @@ import { useEffect, useState } from "react";
 import { TableCryptoCoins } from "./tableCryptoCoins";
 
 import { ICryptoCoin } from "./types/ICryptoCoin";
-import { fetchWrapper } from "@/utils/fetchWrapper";
 import { AutoCompleteSelect } from "./autoCompleteSelect";
-import { requestCryptoCoinDetailed } from "@/http/getCryptoCoinDetails";
+import { requestCryptoCoinDetailed } from "@/http/crypto/getCryptoCoinDetails";
 import { useToast } from "../ui/use-toast";
 
 interface CryptoViewProps {
@@ -15,7 +14,6 @@ interface CryptoViewProps {
 
 export function CryptoView({ cryptoCoinsList }: CryptoViewProps) {
   const [cryptoNames, setCryptoNames] = useState<Array<string>>([]);
-  console.log(cryptoNames, "names");
   const [cryptoCoinsListDetails, setCryptoCoinsListDetails] = useState([]);
 
   const { toast } = useToast();
@@ -62,7 +60,7 @@ export function CryptoView({ cryptoCoinsList }: CryptoViewProps) {
       });
     }
   };
-  
+
   useEffect(() => {
     const interval = setInterval(() => {
       handleGetCoinDetails(cryptoNames);
