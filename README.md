@@ -35,7 +35,7 @@ Vale lembrar que você deve configurar .env como o .env.exemple
   possivel, apenas exibindo dados e não sendo responsavel pela regra de negocio.
 
 - Porque escolhi react com next e não vue, ou outro framework? O next está trazendo uma parte de separação de server-side com client-side e
-  parte de cache muito interessante, e como estamos trabalhando com um grande numero de requests, por conta de atualizar a cada 5 minutos as
+  parte de cache muito interessante, e como estamos trabalhando com um grande numero de requests, por conta de atualizar a cada 5 segundos as
   cryptos, a parte de cache seria bem util junto com a request por lado do server-side.
 
 - Escolhi o shadcn por conta de trazer componentes prontos, mas que seria possivel fazer qualquer customização com ele, mas qualquer outro 
